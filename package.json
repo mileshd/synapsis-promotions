@@ -5,8 +5,9 @@
   "dependencies": {
     "express": "3.0.0alpha4",
     "jade": "*",
-    "stylus": "*",
-    "nib": "*"
+    "stylus": "~0.31.0",
+    "nib": "*",
+    "mongoose": "~3.4.0"
   },
   "main": "app.js"
 }

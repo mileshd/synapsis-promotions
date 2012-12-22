@@ -1,0 +1,45 @@
+extend layout
+
+block content
+
+    h1 Elevator Pitch
+    p 
+      |We are students from the University of Maryland Robert H. Smith School of Business. 
+      |Our mission is simple, to provide you with new opportunities enabled by Internet technology. 
+      |Independent truckers are the lifeblood of our economy, yet with increased regulation, higher gas prices, and diminishing wages, the job is tougher than ever. 
+      |Advertising holds the key to enable you to have greater profits while doing what you normally do! 
+      |Right now you carry a massive mobile billboard everywhere you go. Why not make money from that? 
+      |All you have to do right now to take advantage of this opportunity is to say “yes” and provide your contact information below.
+
+    form(action='/', method='post', accept-charset='UTF-8')
+      fieldset#register
+        legend Sign Up
+        label#labelName(for='name') Your Full Name*: 
+        input#name(type='text', name='name', maxlength='50')br
+        label(for='email') Email Address*:
+        input#email(type='text', name='email', maxlength='50')br
+        label(for='phone_number') Phone Number*:
+        input#phone_number(type='text', name='phone_number', maxlength='50')br
+        label(for='truck_length') Truck Length*:
+        input#truck_length(type='text', name='truck_length', maxlength='50')br
+        label(for='operating_location') Principle Operating Location*:
+        textarea(type='text', name='operating_location', maxlength='50', rows='5')br
+        input#submit(type='submit', name='Submit', value='Submit')
+    
+    #movie.widget
+        h1 Why Us?
+        iframe(width='405', height='304', src='http://www.youtube.com/embed/YlUKcNNmywk', frameborder='0')
+    
+    #bullets.widget
+        h1 5 bullet points for why you should sign up
+        p
+          ul
+            li Bullet point 1
+            li Bullet point 2
+            li Bullet point 3
+            li Bullet point 4
+            li Bullet point 5
+            li Bullet 6 for alignment (close to it, but fix with pading after content)
+    .clearfloat
+
+    a(href='/clear-records') Clear Records

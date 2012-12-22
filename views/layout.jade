@@ -1,16 +1,43 @@
-!!!5
+!!! 5
 html
   head
-    title #{title} - Synapsis Advertising Solutions
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(type="text/javascript", src="/javascripts/vendor/jquery-1.7.2.min.js")
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title}
+    link(href='/stylesheets/styles.css', rel='stylesheet', type='text/css')
+    script(type='application/javascript', src='js/vendor/jquery-1.7.2.min.js')
+    script(type='application/javascript', src='js/vendor/jquery-validate.js')
+    script(type='application/javascript', src='js/util.js')
   body
-    header
-      h1 My Site
-    .container
-      .main-content
+    .wrapper
+      header
+        .logo
+          h1
+            span S
+            |ynapsis 
+            span A
+            |dvertising 
+            span S
+            |olutions
+        nav
+          ul#navlist
+            li
+              a#are(class=locals.className, href='/who-we-are') Who We Are
+            li
+              a#do(class=locals.className, href='/what-we-do') What We Do
+            li
+              a#more(class=locals.className, href='/learn-more') Learn More
+        .clearfloat
         block content
-      .sidebar
-        block sidebar
+        //- nav#bottom
+        //-   ul#navlistbottom
+        //-     li
+        //-       a#are(href='/who-we-are') FAQ
+        //-     li
+        //-       a#do(href='/what-we-do') What We Do
+        //-     li
+        //-       a#more(href='/learn-more') Contact
+        //- .clearfloat
     footer
-      p Running on node with Express, Jade and Stylus
+      p
+        | Copyright © 2012 Synapsis Advertising Solutions. All rights reserved.

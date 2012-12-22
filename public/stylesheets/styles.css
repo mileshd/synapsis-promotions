@@ -1,0 +1,353 @@
+/* ==|== Primary Structure ==================================================
+   Author: Miles Dickinson. Special Thanks to Z. Fogg
+   ========================================================================== */
+/* ==|== imports =========================== */
+@import url("http://fonts.googleapis.com/css?family=Lobster");
+@import url("http://fonts.googleapis.com/css?family=Belgrano");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-family: 'Gill Sans', 'Belgrano', serif;
+  font-size: 18px;
+  background-color: #00f;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #5d87d6), color-stop(0.5, #fff), color-stop(1, #5d87d6));
+  background-image: -webkit-linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: -moz-linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: -o-linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: -ms-linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: -o-linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: -moz-linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: -webkit-linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: -ms-linear-gradient(bottom, #5d87d6 0%, #fff 50%, #5d87d6 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #5d87d6), color-stop(0.5, #fff), color-stop(1, #5d87d6));
+}
+h1 {
+  font-size: 30px;
+  color: #5d87d6;
+  font-family: 'Gill Sans', 'Belgrano', serif;
+  padding-bottom: 10px;
+}
+h2 {
+  font-size: 24px;
+  color: #999;
+  font-family: 'Gill Sans', 'Belgrano', serif;
+}
+h3 {
+  font-size: 30px;
+  color: #677a83;
+  font-family: 'Gill Sans', 'Belgrano', serif;
+}
+a {
+  text-decoration: underline;
+}
+a:link,
+a:visited,
+a:active,
+a:focus {
+  color: #5d87d6;
+}
+a:hover {
+  color: #000;
+}
+p {
+  line-height: 140%;
+  padding-bottom: 25px;
+}
+.wrapper {
+  width: 960px;
+  margin: 40px auto;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 0 0 50px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+header {
+  padding: 50px 50px 0px 50px;
+}
+header .logo {
+  float: left;
+  display: inline;
+  background: url("../images/synapsis-ads-logo-template.gif") no-repeat;
+  width: 115px;
+  height: 135px;
+  padding: 0 10px;
+}
+header .logo h1 {
+  font-size: 24px;
+  margin: 5px 0 0 80px;
+  line-height: 125%;
+}
+header .logo h1 span {
+  color: #000;
+  margin-bottom: 10px;
+}
+nav {
+  float: right;
+  padding: 40px 0 0 0;
+}
+ul#navlist {
+  margin-left: 0;
+  padding-left: 0;
+  white-space: nowrap;
+  text-align: right;
+}
+ul#navlist li {
+  display: inline;
+  list-style-type: none;
+}
+ul#navlist li a {
+  padding: 3px 10px;
+  font-family: 'Lobster', sans-serif;
+  font-size: 36px;
+  text-decoration: none;
+  color: #677a83;
+}
+ul#navlist li a:link,
+ul#navlist li a:visited {
+  color: #677a83;
+}
+ul#navlist li a:hover,
+ul#navlist li a .active {
+  color: #86a5e1;
+}
+.team .member {
+  width: 190px;
+  height: 300px;
+  margin: 5px;
+  padding: 5px;
+  float: left;
+}
+.team .member h3 {
+  float: left;
+  font-family: 'Gill Sans', 'Belgrano', serif;
+  font-size: 18px;
+  margin: 0 0 5px 10px;
+}
+.team .member img {
+  float: left;
+  display: block;
+  margin: 10px;
+}
+.team .member ul {
+  list-style-type: none;
+  width: 170px;
+  font-size: 12px;
+  margin: 0 0 0 10px;
+}
+.team .member ul li {
+  text-align: left;
+  margin: 5px;
+  float: left;
+}
+.widget {
+  float: left;
+  width: 425px;
+  border: 1px solid #000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.widget h1 {
+  font-family: 'Gill Sans', 'Belgrano', serif;
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  margin-bottom: 10px;
+}
+.widget p {
+  font-size: 13px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.widget ul {
+  padding-left: 10px;
+}
+.widget ul li {
+  list-style-type: none;
+}
+#movie.widget {
+  float: left;
+  width: 425px;
+  border: 1px solid #000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+#movie.widget h1 {
+  font-family: 'Gill Sans', 'Belgrano', serif;
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  margin-bottom: 10px;
+}
+#movie.widget iframe {
+  margin: 0 0 5px 8px;
+  border: 2px solid #000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.sectionFooter {
+  background: #d6d9da;
+  padding: 20px 0;
+  margin: 0 20px;
+  border-top: 1px solid #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.footerBox {
+  width: 40%;
+  float: left;
+  padding: 0 40px;
+}
+.footerBox p {
+  font-style: italic;
+  padding: 0 0 10px 0;
+}
+input,
+textarea,
+select {
+  border: 1px solid #555;
+  padding: 0.5em;
+  margin: 5px 0 25px 0;
+  font-size: 15px;
+  line-height: 1.2em;
+  width: 80%;
+  background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+  -webkit-appearance: none;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+  -webkit-border-radius: 0.5em;
+}
+label {
+  padding: 20px 0;
+}
+input#submit {
+  width: 25%;
+}
+fieldset#register {
+  width: 350px;
+  float: right;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: -5px 0 0 0;
+  padding: 20px 20px 10px 20px;
+  border: 1px solid #000;
+}
+footer {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #000;
+}
+/* ==|== helper classes ====================================================== */
+.clearfloat {
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0;
+}
+.red {
+  color: #f00;
+}
+.horSeparator {
+  background: url("../images/horSeparator.png") repeat-x;
+  height: 13px;
+  margin: 20px 0;
+}
