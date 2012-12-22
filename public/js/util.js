@@ -1,63 +1,93 @@
 $(document).ready(function(){
 
-    // var current_title = $(document).attr('title');
-    // var link_color = '#5d87d6';
+    var user = {};
 
-    // if (current_title == "Who We Are") {
-    //     $('a#are:link').css('color', link_color);
-    // } else if (current_title == "What We Do") {
-    //     $('a#do:link').css('color', link_color);
-    // } else {
-    //     $('a#more:link').css('color', link_color);
-    // }
+    $('fieldset#2').css('display', 'none');
+    $('fieldset#3').css('display', 'none');
 
-    $('form').submit(function(event){
+    $('#next').click(function(){
 
+        user.name = $('#name').val();
+        user.email = $('#email').val();
+        user.mail = $('#mail').val();
+        user.region = $('#region').val();
+        user.phone = $('#phone-number').val();
+
+        // var error = validate(user);
+
+        // if (error) {
+        //     alert("error");
+        //     alert(error);
+        //     return false;
+        // }
+
+            $('fieldset#1').fadeOut('slow', function() {
+                $('fieldset#2').fadeIn('slow');
+            });
+    });
+
+    $('#submit').click(function(event){
+     
       event.preventDefault();
+
+        user.accessible = $('#name').val();
+        user.make = $('#email').val();
+        user.model = $('#mail').val();
+        user.year = $('#region').val();
+     
       $.ajax({
         type: 'POST',
-        url: '/learn-more',
-        data: $('form').serialize(),
+        url: '/',
+        data: user,
         success: function() {
-          $('label#labelName').before('<p style="color: green;">Thank you for your interest.</p>');
-          clearForm('form');
+          $('fieldset#2').fadeOut('slow', function() {
+                $('fieldset#3').fadeIn('slow');
+            });
         },
         error: function() {
           alert('why error');
         }
-      });
-
+        });
 
     });
 
-    function clearForm(ele) {
-      $(ele).find(':input').each(function() {
-        if (this.name == 'Submit') {
-            return;
+    function validate(user) {
+        var message = "";
+        var err = false;
+
+        if (user.name == '') {
+            message += "Please enter your full name.</br>";
+            err = true;
         }
-        $(this).val('');
-        //$(this).css({opacity: 0.5});
-        $(this).attr('disabled', 'disabled');
-      });
+
+        if  (!validateEmail(user.email)) {
+            message += "Please enter a valid email address.</br>";
+            err = true;
+        }
+
+        if (err == true) {
+            return message;
+        }
+        else {
+            return false;
+        }
     }
 
-    // function validate() {
-    //   $("#myform").validate({
-    //     rules: {
-    //       username: {
-    //         required: true,
-    //         minLength: 2,
-    //         remote: "users.php"
-    //       }
-    //     },
-    //     messages: {
-    //       username: {
-    //         required: "Enter your username",
-    //         minLength: "At least 2 characters are necessary",
-    //         remote: String.format("The name {0} is already in use")
-    //       }
+    function validateEmail(email) { 
+    var re = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+    return re.test(email);
+}
+
+    // function clearForm(ele) {
+    //   $(ele).find(':input').each(function() {
+    //     if (this.name == 'Submit') {
+    //         return;
     //     }
+    //     $(this).val('');
+    //     //$(this).css({opacity: 0.5});
+    //     $(this).attr('disabled', 'disabled');
     //   });
     // }
+
 
 });

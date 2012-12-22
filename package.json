@@ -7,7 +7,7 @@
     "jade": "*",
     "stylus": "~0.31.0",
     "nib": "*",
-    "mongoose": "~3.4.0"
+    "mysql": "2.0.0-alpha5"
   },
   "main": "app.js"
 }

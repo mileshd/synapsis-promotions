@@ -22,22 +22,14 @@ html
         nav
           ul#navlist
             li
-              a#are(class=locals.className, href='/who-we-are') Who We Are
+              a(href='http://facebook.com')
+                img(src='images/facebook.jpg')
             li
-              a#do(class=locals.className, href='/what-we-do') What We Do
-            li
-              a#more(class=locals.className, href='/learn-more') Learn More
-        .clearfloat
+              a(href='/what-we-do')
+                img#twitter(src='images/twitter.png')
+
         block content
-        //- nav#bottom
-        //-   ul#navlistbottom
-        //-     li
-        //-       a#are(href='/who-we-are') FAQ
-        //-     li
-        //-       a#do(href='/what-we-do') What We Do
-        //-     li
-        //-       a#more(href='/learn-more') Contact
-        //- .clearfloat
+
     footer
       p
         | Copyright © 2012 Synapsis Advertising Solutions. All rights reserved.

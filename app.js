@@ -17,6 +17,9 @@ function compile(str, path) {
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
+app.set('view options', {
+  layout: false
+});
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(stylus.middleware(
@@ -26,12 +29,8 @@ app.use(stylus.middleware(
 ));
 app.use(express.static(__dirname + '/public'));
 
-app.get('/who-we-are', routes.are);
-app.get('/what-we-do', routes.do);
-app.get('/learn-more', routes.more);
 app.get('/', routes.more);
-app.post('/learn-more', routes.post);
-app.get('/clear-records', routes.post.methods);
+app.post('/', routes.submit());
 
 app.listen(3000, function() {
   console.log("Server listening on port 3000");

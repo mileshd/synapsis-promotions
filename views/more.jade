@@ -1,45 +1,82 @@
-extend layout
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title}
+    link(href='/stylesheets/styles.css', rel='stylesheet', type='text/css')
+    script(type='application/javascript', src='js/vendor/jquery-1.7.2.min.js')
+    script(type='application/javascript', src='js/vendor/jquery-validate.js')
+    script(type='application/javascript', src='js/util.js')
+  body
+    .wrapper
+      header
+        .logo
+          h1
+            span S
+            |ynapsis 
+            span A
+            |dvertising 
+            span S
+            |olutions
+        nav
+          ul#navlist
+            li
+              a(href='/who-we-are')
+                img#facebook(src='images/facebook.jpg', width='75', height='75')
+            li
+              a(href='/what-we-do')
+                img#twitter(src='images/twitter.png', width='85', height='80')
 
-block content
 
-    h1 Elevator Pitch
-    p 
-      |We are students from the University of Maryland Robert H. Smith School of Business. 
-      |Our mission is simple, to provide you with new opportunities enabled by Internet technology. 
-      |Independent truckers are the lifeblood of our economy, yet with increased regulation, higher gas prices, and diminishing wages, the job is tougher than ever. 
-      |Advertising holds the key to enable you to have greater profits while doing what you normally do! 
-      |Right now you carry a massive mobile billboard everywhere you go. Why not make money from that? 
-      |All you have to do right now to take advantage of this opportunity is to say “yes” and provide your contact information below.
+      form(action='/user', method='post', accept-charset='UTF-8', onsubmit="return false")
+        fieldset#1
+          legend Sign Up
+          label#labelName(for='name') Your Full Name*: 
+          input#name(type='text', name='name', maxlength='50')br
+          label(for='email') Email Address*:
+          input#email(type='text', name='email', maxlength='50')br
+          label(for='mail') Mailing Address*:
+          input#mail(type='text', name='mail', maxlength='50')br
+          label(for='region') Region*:
+          br
+          select
+            option(value='College Park, MD') College Park, MD
+          br
+          label(for='phone_number') Phone Number*:
+          input#phone-number(type='text', name='phone_number', maxlength='50')br
+          input#next(type='submit', name='next', value='Next')
+        
+        fieldset#2
+          label(for='car-accessible') Car Accessible*:
+          br
+          select
+            option(value='yes') Yes
+            option(value='no') No
+          br
+          label(for='car-make') Car Make*:
+          input#car-make(type='text', name='car-make', maxlength='50')br
+          label(for='car-model') Car Model*:
+          input#car-model(type='text', name='car-model', maxlength='50')br
+          label(for='car-year') Car Year*:
+          input#car-year(type='text', name='car-year', maxlength='50')br
+          input#submit(type='submit', name='submit', value='Submit')
 
-    form(action='/', method='post', accept-charset='UTF-8')
-      fieldset#register
-        legend Sign Up
-        label#labelName(for='name') Your Full Name*: 
-        input#name(type='text', name='name', maxlength='50')br
-        label(for='email') Email Address*:
-        input#email(type='text', name='email', maxlength='50')br
-        label(for='phone_number') Phone Number*:
-        input#phone_number(type='text', name='phone_number', maxlength='50')br
-        label(for='truck_length') Truck Length*:
-        input#truck_length(type='text', name='truck_length', maxlength='50')br
-        label(for='operating_location') Principle Operating Location*:
-        textarea(type='text', name='operating_location', maxlength='50', rows='5')br
-        input#submit(type='submit', name='Submit', value='Submit')
-    
-    #movie.widget
-        h1 Why Us?
-        iframe(width='405', height='304', src='http://www.youtube.com/embed/YlUKcNNmywk', frameborder='0')
-    
-    #bullets.widget
-        h1 5 bullet points for why you should sign up
-        p
-          ul
-            li Bullet point 1
-            li Bullet point 2
-            li Bullet point 3
-            li Bullet point 4
-            li Bullet point 5
-            li Bullet 6 for alignment (close to it, but fix with pading after content)
-    .clearfloat
+        fieldset#3
+          p
+            |Thank you for your interest. 
+            |We will be contacting you soon about this exciting opportunity.
+      
+        #movie.widget
+            h1 Easy Money
+            p
+              |Being in College is TOUGH! All those tests, expensive books, high rent, and other...expenses add up! 
+              |What if you could have a little extra cash in your pocket each month for doing virtually nothing different from what you normally do? 
+              |It’s simple really, just agree to host a magnetic ad on the side of your car and get paid. 
+              |Simple. You’ll be helping out local businesses and getting enough cash to buy at least a couple thirties...of high quality study cards of course.
 
-    a(href='/clear-records') Clear Records
+        .clearfloat
+
+    footer
+          p
+            | Copyright © 2012 Synapsis Advertising Solutions. All rights reserved.
