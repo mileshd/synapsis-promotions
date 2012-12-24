@@ -1,0 +1,37 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='/stylesheets/table.css', rel='stylesheet', type='text/css')
+    script(type='application/javascript', src='js/vendor/DataTables/media/js/jquery.js')
+    script(type='application/javascript', src='js/vendor/DataTables/media/js/jquery.dataTables.js')
+    script(type='application/javascript', src='js/table.js')
+  body
+    table.users
+      th Name
+      th Email
+      th Mailing
+      th Region
+      th Phone
+      th Car Accessible
+      th Commuter
+      th Car Make
+      th Car Model
+      th Car Year
+      th Weekly Miles
+      th Date Created
+      tbody
+        for user in users
+          tr
+            td #{user.name}
+            td #{user.email}
+            td #{user.mail}
+            td #{user.region}
+            td #{user.phone}
+            td #{user.car_accessible}
+            td #{user.commuter}
+            td #{user.car_make}
+            td #{user.car_model}
+            td #{user.car_year}
+            td #{user.weekly_miles}
+            td #{user.date}

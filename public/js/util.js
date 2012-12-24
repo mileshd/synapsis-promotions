@@ -10,7 +10,7 @@ $(document).ready(function(){
         user.name = $('#name').val();
         user.email = $('#email').val();
         user.mail = $('#mail').val();
-        user.region = $('#region').val();
+        user.region = $('select.region').val();
         user.phone = $('#phone-number').val();
 
         // var error = validate(user);
@@ -30,10 +30,12 @@ $(document).ready(function(){
      
       event.preventDefault();
 
-        user.accessible = $('#name').val();
-        user.make = $('#email').val();
-        user.model = $('#mail').val();
-        user.year = $('#region').val();
+        user.car_accessible = $('select.car-accessible').val();
+        user.commuter = $('select.commuter').val();
+        user.car_make = $('#car-make').val();
+        user.car_model = $('#car-model').val();
+        user.car_year = $('#car-year').val();
+        user.weekly_miles = $('#miles-driven').val();
      
       $.ajax({
         type: 'POST',
@@ -41,7 +43,7 @@ $(document).ready(function(){
         data: user,
         success: function() {
           $('fieldset#2').fadeOut('slow', function() {
-                $('fieldset#3').fadeIn('slow');
+                $('fieldset#3').fadeIn('slow').css('margin-top', '65px');
             });
         },
         error: function() {

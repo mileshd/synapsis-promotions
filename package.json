@@ -7,7 +7,9 @@
     "jade": "*",
     "stylus": "~0.31.0",
     "nib": "*",
-    "mysql": "2.0.0-alpha5"
+    "mysql": "2.0.0-alpha5",
+    "redis": "~0.8.2",
+    "mongodb": "~1.2.7"
   },
   "main": "app.js"
 }

@@ -40,19 +40,28 @@ html
           input#mail(type='text', name='mail', maxlength='50')br
           label(for='region') Region*:
           br
-          select
+          select.region
             option(value='College Park, MD') College Park, MD
           br
-          label(for='phone_number') Phone Number*:
-          input#phone-number(type='text', name='phone_number', maxlength='50')br
+          label(for='phone-number') Phone Number*:
+          input#phone-number(type='text', name='phone-number', maxlength='50')br
           input#next(type='submit', name='next', value='Next')
         
         fieldset#2
-          label(for='car-accessible') Car Accessible*:
+          div.select
+            label(for='car-accessible') Car Accessible*:
+            br
+            select.car-accessible
+              option(value='yes') Yes
+              option(value='no') No
+          div.select
+            label(for='commuter') Commuter*:
+            br
+            select.commuter
+              option(value='yes') Yes
+              option(value='no') No
+          .clearfloat
           br
-          select
-            option(value='yes') Yes
-            option(value='no') No
           br
           label(for='car-make') Car Make*:
           input#car-make(type='text', name='car-make', maxlength='50')br
@@ -60,6 +69,8 @@ html
           input#car-model(type='text', name='car-model', maxlength='50')br
           label(for='car-year') Car Year*:
           input#car-year(type='text', name='car-year', maxlength='50')br
+          label(for='miles-driven') Approx. Miles Driven per Week*:
+          input#miles-driven(type='text', name='miles-driven', maxlength='50')br
           input#submit(type='submit', name='submit', value='Submit')
 
         fieldset#3
