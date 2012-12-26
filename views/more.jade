@@ -15,18 +15,16 @@ html
           h1
             span S
             |ynapsis 
-            span A
-            |dvertising 
-            span S
-            |olutions
+            span P
+            |romotions 
         nav
           ul#navlist
             li
-              a(href='/who-we-are')
-                img#facebook(src='images/facebook.jpg', width='75', height='75')
-            li
-              a(href='/what-we-do')
-                img#twitter(src='images/twitter.png', width='85', height='80')
+              a#facebook(href='')
+                img.facebook(src='images/facebook.jpg', width='90', height='90')
+            //- li
+            //-   a(href='/what-we-do')
+            //-     img#twitter(src='images/twitter.png', width='85', height='80')
 
 
       form(action='/user', method='post', accept-charset='UTF-8', onsubmit="return false")
@@ -36,6 +34,15 @@ html
           input#name(type='text', name='name', maxlength='50')br
           label(for='email') Email Address*:
           input#email(type='text', name='email', maxlength='50')br
+          label(for='class-year') Class Year*:
+          br
+          select.class-year
+            option(value='Freshman') Freshman
+            option(value='Sophmore') Sophmore
+            option(value='Junior') Junior
+            option(value='Senior') Senior
+            option(value='Super Senior') Super Senior
+          br
           label(for='mail') Mailing Address*:
           input#mail(type='text', name='mail', maxlength='50')br
           label(for='region') Region*:
@@ -63,28 +70,40 @@ html
           .clearfloat
           br
           br
-          label(for='car-make') Car Make*:
+          label(for='car-location') Car Location*:
+          input#car-location(type='text', name='car-location', maxlength='50')br
+          label(for='car-make') Car Make:
           input#car-make(type='text', name='car-make', maxlength='50')br
-          label(for='car-model') Car Model*:
+          label(for='car-model') Car Model:
           input#car-model(type='text', name='car-model', maxlength='50')br
-          label(for='car-year') Car Year*:
+          label(for='car-year') Car Year:
           input#car-year(type='text', name='car-year', maxlength='50')br
           label(for='miles-driven') Approx. Miles Driven per Week*:
           input#miles-driven(type='text', name='miles-driven', maxlength='50')br
+          //- input(type='checkbox', name='toc')
+          //- | I agree to the
+          //- a(href='#toc') Terms and Conditions 
+          //- |of Synapsis Advertising Solutions
+          input#back(type='button', name='back', value='Back')
           input#submit(type='submit', name='submit', value='Submit')
 
         fieldset#3
           p
             |Thank you for your interest. 
-            |We will be contacting you soon about this exciting opportunity.
+            |We will be contacting you soon about this exciting opportunity. 
+            |If you have any questions or comments, please contact us at 
+            a(href='mailto:synapsis.president@gmail.com') synapsis.president@gmail.com
       
         #movie.widget
-            h1 Easy Money
+            h1 Simple Task, Extra Cash
             p
               |Being in College is TOUGH! All those tests, expensive books, high rent, and other...expenses add up! 
               |What if you could have a little extra cash in your pocket each month for doing virtually nothing different from what you normally do? 
               |It’s simple really, just agree to host a magnetic ad on the side of your car and get paid. 
-              |Simple. You’ll be helping out local businesses and getting enough cash to buy at least a couple thirties...of high quality study cards of course.
+              |Simple.
+            p
+              |We will of course conduct random checks of your cars and a failure to host the ad will result in removal from the system. 
+              |As long as you abide by the simple rules outlined in the terms of service, you will get paid. 
 
         .clearfloat
 

@@ -13,7 +13,7 @@ var pass                  = 'milesrocks';
 var basicAuthMessage = 'Restricted area, please identify';
 
 //var server = new mongodb.Server('127.0.0.1', 27017);
-var db = mongoose.createConnection('mongodb://localhost/sas');
+var db = mongoose.createConnection('mongodb://nodejitsu:db20fc3eeb193c9189457c7f9fafe80e@linus.mongohq.com:10002/nodejitsudb8942125844');
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -23,16 +23,18 @@ db.once('open', function() {
 var Schema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
+  year: { type: String, required: true },
   mail: { type: String, required: true },
   region: { type: String, required: true },
   phone: { type: String, required: true },
   car_accessible: { type: String, required: true },
   commuter: { type: String, required: true },
-  car_make: { type: String, required: true },
-  car_model: { type: String, required: true },
-  car_year: { type: Number, required: true },
+  car_location: { type: String, required: true },
+  car_make: { type: String },
+  car_model: { type: String },
+  car_year: { type: Number },
   weekly_miles: { type: Number, required: true },
-  date: { type: Date, default: Date.now }
+  date: { type: Date, default: Date.now() }
 });
 
 var User = db.model('User', Schema);
@@ -71,19 +73,18 @@ app.post('/', function(req, res){
   var user = new User({
     name: req.body.name,
     email: req.body.email,
+    year: req.body.year,
     mail: req.body.mail,
     region: req.body.region,
     phone: req.body.phone,
     car_accessible: req.body.car_accessible,
     commuter: req.body.commuter,
+    car_location: req.body.car_location,
     car_make: req.body.car_make,
     car_model: req.body.car_model,
     car_year: req.body.car_year,
     weekly_miles: req.body.weekly_miles
   });
-
-  console.log(user);
-  console.log(user.name);
 
   user.save(function(err, user) {
     if (err)

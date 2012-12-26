@@ -1,15 +1,24 @@
 {
   "name": "sas",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "private": "true",
+  "domains": [
+    "synapsispromotions.com"
+  ],
   "dependencies": {
     "express": "3.0.0alpha4",
     "jade": "*",
     "stylus": "~0.31.0",
     "nib": "*",
-    "mysql": "2.0.0-alpha5",
-    "redis": "~0.8.2",
-    "mongodb": "~1.2.7"
+    "mongodb": "~1.2.7",
+    "mongoose": "3.5.x"
   },
-  "main": "app.js"
+  "main": "app.js",
+  "subdomain": "synapsispromotions",
+  "scripts": {
+    "start": "app.js"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
 }
