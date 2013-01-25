@@ -55,11 +55,9 @@ function compile(str, path) {
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.set('view options', {
-  layout: false
-});
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
+app.use(express.cookieParser());
 app.use(stylus.middleware(
   { src: __dirname + '/public'
   , compile: compile
@@ -67,7 +65,12 @@ app.use(stylus.middleware(
 ));
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', routes.more);
+app.get('/', routes.landingPage);
+app.get('/student', routes.student);
+app.get('/company', routes.company);
+app.get('/lp', function(req, res) {
+  res.render('landing-page', { title: "landing Page"});
+});
 app.post('/', function(req, res){
 
   var user = new User({

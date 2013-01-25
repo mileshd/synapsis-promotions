@@ -5,31 +5,36 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title #{title}
     link(href='/stylesheets/styles.css', rel='stylesheet', type='text/css')
-    script(type='application/javascript', src='js/vendor/jquery-1.7.2.min.js')
-    script(type='application/javascript', src='js/vendor/jquery-validate.js')
-    script(type='application/javascript', src='js/util.js')
+    link(rel='stylesheet', href='http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css')
+    script(src='http://code.jquery.com/jquery-1.8.3.js')
+    script(src='js/vendor/jquery.bgiframe-2.1.2.js')
+    script(src='http://code.jquery.com/ui/1.10.0/jquery-ui.js')
+    link(rel='stylesheet', href='/resources/demos/style.css')
+    script(type='application/javascript', src='js/vendor/cookie.js')
+    //- script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js')
+    //- //if lt IE 9
+    //- script(type='text/javascript', src='/js/excanvas/excanvas.js')
+    //- script(type='text/javascript', src='/js/spinners/spinners.min.js')
+    //- script(type='text/javascript', src='/js/lightview/lightview.js')
+    //- link(rel='stylesheet', type='text/css', href='/css/lightview/lightview.css')
+  //- include landing-page
+
   body
-    .wrapper
-      header
-        .logo
-          h1
-            span S
-            |ynapsis 
-            span A
-            |dvertising 
-            span S
-            |olutions
-        nav
-          ul#navlist
-            li
-              a(href='http://facebook.com')
-                img(src='images/facebook.jpg')
-            li
-              a(href='/what-we-do')
-                img#twitter(src='images/twitter.png')
-
-        block content
-
+    ul#navlist
+      li
+        a(href='/student') Student
+      li |
+      li
+        a(href='/company') Company
+      
+    block content
+        
+    script(type='application/javascript', src='js/vendor/jquery-1.7.2.min.js')
+    script(type='application/javascript', src='js/vendor/pagify.js')
+    script(type='application/javascript', src='js/vendor/jquery-validate.js')
+    script(type='application/javascript', src='js/vendor/backstretch.js')
+    script(type='application/javascript', src='js/navigate.js')
+    script(type='application/javascript', src='js/util.js')
     footer
       p
         | Copyright © 2012 Synapsis Advertising Solutions. All rights reserved.

@@ -1,32 +1,20 @@
-!!! 5
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title #{title}
-    link(href='/stylesheets/styles.css', rel='stylesheet', type='text/css')
-    script(type='application/javascript', src='js/vendor/jquery-1.7.2.min.js')
-    script(type='application/javascript', src='js/vendor/jquery-validate.js')
-    script(type='application/javascript', src='js/util.js')
-  body
-    .wrapper
-      header
-        .logo
-          h1
-            span S
-            |ynapsis 
-            span P
-            |romotions 
-        nav
-          ul#navlist
-            li
-              a#facebook(href='')
-                img.facebook(src='images/facebook.jpg', width='90', height='90')
-            //- li
-            //-   a(href='/what-we-do')
-            //-     img#twitter(src='images/twitter.png', width='85', height='80')
+extends layout
 
-
+block content
+  .wrapper
+    header
+      .logo
+        h1
+          span S
+          |ynapsis 
+          span P
+          |romotions
+        
+      #facebook
+        a(href='http://facebook.com')
+          img(src='images/facebook.jpg')
+    .clearfloat
+    #sign-up
       form(action='/user', method='post', accept-charset='UTF-8', onsubmit="return false")
         fieldset#1
           legend Sign Up
@@ -94,19 +82,23 @@ html
             |If you have any questions or comments, please contact us at 
             a(href='mailto:synapsis.president@gmail.com') synapsis.president@gmail.com
       
-        #movie.widget
-            h1 Simple Task, Extra Cash
-            p
-              |Being in College is TOUGH! All those tests, expensive books, high rent, and other...expenses add up! 
-              |What if you could have a little extra cash in your pocket each month for doing virtually nothing different from what you normally do? 
-              |It’s simple really, just agree to host a magnetic ad on the side of your car and get paid. 
-              |Simple.
-            p
-              |We will of course conduct random checks of your cars and a failure to host the ad will result in removal from the system. 
-              |As long as you abide by the simple rules outlined in the terms of service, you will get paid. 
+      #movie.widget
+        h1 Simple Task, Extra Cash
+        p
+          |Being in College is TOUGH! All those tests, expensive books, high rent, and other expenses add up! 
+          |What if you could have a little extra cash in your pocket each month for doing virtually nothing different from what you normally do? 
+          |It’s simple really, just agree to host a magnetic ad on the side of your car and get paid. 
+          |Simple.
+        p
+          |We will of course conduct random checks of your cars and a failure to host the ad will result in removal from the system. 
+          |As long as you abide by the simple rules outlined in the terms of service, you will get paid.
+    .clearfloat
 
-        .clearfloat
-
-    footer
-          p
-            | Copyright © 2012 Synapsis Advertising Solutions. All rights reserved.
+    h1 How it Works:
+    ul#works
+      li You complete an application to host a magnetic advertisement on your vehicle.
+      li When a client company purchases an advertisement, a Synapsis Promotions representative will meet with you, apply the magnetic advertisement to your vehicle, and have you sign a service contract in which you agree to the Terms of Service.
+      li Every two weeks, you must send a picture of your hosted advertisement to Synapsis Promotions to confirm that the ad is in satisfactory condition. 
+      li As long as you abide by the simple criteria above, you will receive a check by mail on a biweekly basis for the duration of the contract.
+      li At the end of the contract, a Synapsis Promotions representative will meet with you to retrieve the advertisement. If the contract was serviced appropriately, according to the terms of the contract, you will continue to be eligible to host magnetic advertisements on your vehicle as they become available.
+    .clearfloat

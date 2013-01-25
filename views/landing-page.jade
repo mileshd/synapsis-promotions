@@ -1,0 +1,56 @@
+!!! 5
+html(lang='en')
+head
+    meta(charset='utf-8')
+    title #{title}
+    link(rel='stylesheet', href='http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css')
+    script(src='http://code.jquery.com/jquery-1.8.3.js')
+    script(src='/resources/demos/external/jquery.bgiframe-2.1.2.js')
+    script(src='http://code.jquery.com/ui/1.10.0/jquery-ui.js')
+    script(type='application/javascript', src='js/vendor/backstretch.js')
+    script(type='application/javascript', src='js/vendor/cookie.js')
+    script(src='js/lp.js')
+    link(rel='stylesheet', href='/resources/demos/style.css')
+    style
+        .ui-dialog {
+            position: relative;
+        }
+
+        .ui-dialog .ui-button {
+         color: #fff;
+         background: #555555 url("facebook.jpg") repeat-x;
+         height: 125px;
+         width: 125px;
+        }
+        .ui-dialog .ui-button.ui-state-hover {
+         color: #fff;
+         background: #0078a3 url("facebook.jpg") repeat-x;
+        }
+
+        .ui-dialog .ui-dialog-buttonpane { 
+            border-width: 0 !important;
+            text-align: center;
+            position: relative;
+            background: none;
+            top: -20px;
+            right: 50px;
+        }
+
+        .leftButton
+        {
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /*margin: 0 15px;*/
+        }
+
+        p {
+          margin-left: 85px;
+        }
+
+    body
+        #dialog-confirm
+          p
+            | What kind of user are you?

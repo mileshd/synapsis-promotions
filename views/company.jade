@@ -1,0 +1,154 @@
+extends layout
+
+block content
+  .wrapper
+    ul#nav
+      li
+        a#signup(href='#sign-up') Sign Up
+      li
+        a#whatweoffer(href='#what-we-offer') What We Offer
+      li
+        a#aboutus(href='#about-us') About Us
+      li
+        a#faqnav(href='#faq') FAQ
+    header
+      .logo
+        h1
+          span S
+          |ynapsis 
+          span P
+          |romotions
+        
+      #facebook
+        a(href='http://facebook.com')
+          img(src='images/facebook.jpg')
+    .clearfloat
+    #sign-up.company-nav
+      form(action='/user', method='post', accept-charset='UTF-8', onsubmit="return false")
+        fieldset#1
+          legend Sign Up
+          label#labelName(for='name') Your Full Name*: 
+          input#name(type='text', name='name', maxlength='50')br
+          label(for='email') Email Address*:
+          input#email(type='text', name='email', maxlength='50')br
+          label(for='class-year') Class Year*:
+          br
+          select.class-year
+            option(value='Freshman') Freshman
+            option(value='Sophmore') Sophomore
+            option(value='Junior') Junior
+            option(value='Senior') Senior
+            option(value='Super Senior') Super Senior
+          br
+          label(for='mail') Mailing Address*:
+          input#mail(type='text', name='mail', maxlength='50')br
+          label(for='region') Region*:
+          br
+          select.region
+            option(value='College Park, MD') College Park, MD
+          br
+          label(for='phone-number') Phone Number*:
+          input#phone-number(type='text', name='phone-number', maxlength='50')br
+          input#next(type='submit', name='next', value='Next')
+        
+        fieldset#2
+          div.select
+            label(for='car-accessible') Car Accessible*:
+            br
+            select.car-accessible
+              option(value='yes') Yes
+              option(value='no') No
+          div.select
+            label(for='commuter') Commuter*:
+            br
+            select.commuter
+              option(value='yes') Yes
+              option(value='no') No
+          .clearfloat
+          br
+          br
+          label(for='car-location') Car Location*:
+          input#car-location(type='text', name='car-location', maxlength='50')br
+          label(for='car-make') Car Make:
+          input#car-make(type='text', name='car-make', maxlength='50')br
+          label(for='car-model') Car Model:
+          input#car-model(type='text', name='car-model', maxlength='50')br
+          label(for='car-year') Car Year:
+          input#car-year(type='text', name='car-year', maxlength='50')br
+          label(for='miles-driven') Approx. Miles Driven per Week*:
+          input#miles-driven(type='text', name='miles-driven', maxlength='50')br
+          //- input(type='checkbox', name='toc')
+          //- | I agree to the
+          //- a(href='#toc') Terms and Conditions 
+          //- |of Synapsis Advertising Solutions
+          input#back(type='button', name='back', value='Back')
+          input#submit(type='submit', name='submit', value='Submit')
+
+        fieldset#3
+          p
+            |Thank you for your interest. 
+            |We will be contacting you soon about this exciting opportunity. 
+            |If you have any questions or comments, please contact us at 
+            a(href='mailto:synapsis.president@gmail.com') synapsis.president@gmail.com
+      
+      #movie.widget
+        h1 Building Traffic for your Business
+        p
+          |Why not have your target market do your marketing for you? 
+          |In the highly localized and networked college environment, there are many avenues for advertisement. 
+          |However, none are as effective as student-to-student marketing. 
+          |We offer a strategy that will differentiate your company’s marketing and drive sales - literally! 
+          |When local students host a magnetic advertisement of your business on their cars, you get: 
+        ul.company
+          li A new marketing channel that is innovative and compelling.
+          li Student drivers sign a Terms of Service Contract with Synapsis Promotions to ensure their agreement to display the advertisement at all times, represent the business positively, abide by all traffic safety laws, and maintain their vehicle’s appearance.
+          li We take care of all contact with, and compensation of, student drivers.
+          li Students talking about your business.
+          li The goodwill that comes from helping local students support themselves.
+    #what-we-offer.company-nav
+      h1 What We Offer
+      p
+        |This new and innovative marketing channel is provided by Synapsis Promotions. 
+        |When you partner with us, SP will pair an eligible student driver with a magnetic advertisement of your business that the student will display on his or her vehicle. 
+        |These magnetic ads will be hosted on the side of the student’s vehicle throughout your desired contract length. 
+
+      p
+        |We offer the following assurances to you:
+        ul.company
+          li students -- and their vehicles -- are prescreened and evaluated regularly
+          li an extremely affordable source for ad impressions
+          li we take care of all contact with, and compensation of, student drivers
+      p
+        |Student drivers are required to submit pictures of the magnetic advertisements on their cars once a week to Synapsis Promotions as a prerequisite for payment. 
+        |This ensures that your ad has not been stolen or defaced. 
+        |We will be always be accessible to you throughout the length of our contract to answer questions, address concerns, or resolve any issues. 
+        |We offer a prorated money-back guarantee if you are not satisfied.     
+      p
+        |To further add value for your company, Synapsis Promotions hosts a Facebook page. 
+        |We post AND send weekly e-mails to all who join our page detailing current offers or promotions from our partner companies. 
+        |Active magnetic vehicle advertisement hosts can use this page to post photos and promotional comments regarding their hosted client (always monitored by SP). 
+        |This page and the weekly e-mail can be just as effective, and MUCH less expensive, as an ad in the newspaper.
+      p
+        |Our pricing structure is subscription based, with a slightly larger first month fee to cover the cost of the magnetic ad. 
+        |We will work closely with you to help you choose the proper scale for your campaign to achieve the maximum results from your investment.
+  
+    #about-us.company-nav
+      h1 About Us
+      p
+        | We are student entrepreneurs at The University of Maryland. Our goal is to give small business enhanced abilities using web-based solutions.
+        | We believe that Synapsis Promotions can 
+
+    #faq.company-nav
+      h1 Frequently Asked Questions
+      ul.faq
+        br
+        li.bold Q: What happens if the magnet gets defaced or stolen?
+        li A: We expedite the creation of a new magnet, and your contract is appropriately extended at no cost to you. 
+        br
+        li.bold Q: What is stopping the student from just taking off the magnet and not advertising?
+        li A: We periodically check on the ad’s placement by contacting the driver, conducting random audits, and requiring drivers to sign a contract with Synapsis Promotions. In the Terms of Service they agree to display the ad on their vehicle for the duration of the contract. Drivers who violate their signed contract will no longer be eligible for employment by SP.
+        br
+        li.bold Q: I could just take out a newspaper ad! Why is your plan a better alternative?
+        li A: In this day and age, it is all about engagement. Local companies need a way to effectively target and reach the student market. Through the Synapsis Promotions plan, students themselves market partner businesses through magnetic advertising and social networking. Engaging students directly in the marketing process is more efficient and generates buzz for businesses in a way that traditional advertising can’t. 
+
+    .clearfloat

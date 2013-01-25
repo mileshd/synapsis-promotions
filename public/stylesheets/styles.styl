@@ -18,22 +18,15 @@ header_font_family = 'Redressed', cursive
 body_font_family = 'Gill Sans', 'Trebuchet MS', Calibri, sans-serif
 
 // Convenience classes and mixins.
-border-radius(n)
-  -webkit-border-radius n
-  -moz-border-radius n
-  border-radius n
-
-// background_image(arguments)
-//   linear-gradient (arguments)
-//   -o-linear-gradient (arguments)
-//   -moz-linear-gradient (arguments)
-//   -webkit-linear-gradient (arguments)
-//   -ms-linear-gradient (arguments)
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
 
 // Styles
 body
   font-family body_font_family
-  font-size 18px
+  font-size 20px
   background-color blue
   background-image: linear-gradient(bottom, rgb(93,135,214) 0%, rgb(255,255,255) 50%, rgb(93,135,214) 100%);
   background-image: -o-linear-gradient(bottom, rgb(93,135,214) 0%, rgb(255,255,255) 50%, rgb(93,135,214) 100%);
@@ -81,7 +74,6 @@ p
 
 .wrapper
   width 860px
-  height 590px
   margin 50px auto
   background #ffffff
   box-shadow 0 0 10px rgba(0, 0, 0, 0.2)
@@ -89,7 +81,7 @@ p
   border-radius 10px
 
 header
-  // padding 50px 50px 0px 50px
+  float left
   width 425px
   .logo
     float left
@@ -106,33 +98,85 @@ header
       span
         color #000000
         margin-bottom 10px
-      
-nav
-  float right
-  padding 40px 0 0 0
-
-ul#navlist
-  margin -25px 0 0 0
-  padding-left 0
-  white-space nowrap
-  text-align right
-  li
-    display inline
-    list-style-type none
+  #facebook
+    float right
+    margin 10px 10px 0 0
     a
       img
-        margin -10px 20px 0 0
+        height 90px
+        width 90px
 
+ul#navlist
+  display block
+  text-align center
+  background-color #C0CCE6
+  width 250px
+  margin 0 auto
+  border-radius 0 0 5px 5px
+  li 
+    display inline-block
+    padding 5px 10px
+    a
+      text-decoration none
+      color black
+      &:hover
+        color white
+
+ul#nav
+  list-style-type none
+  display block
+  background: #feffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #feffff 0%, #5d87d6 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#5d87d6)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #feffff 0%,#5d87d6 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #feffff 0%,#5d87d6 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #feffff 0%,#5d87d6 100%); /* IE10+ */
+  width 940px
+  height 30px
+  margin -30px 0 20px -40px
+  text-align center
+  border-radius 0 0 7px 7px
+  li
+    display inline-block
+    margin-top -15px
+    // border 1px solid black
+    padding 0 15px
+    a
+      color black
+      font-family gill sans, serif
+      font-size 21px
+      text-decoration none
+    a:hover
+        color #5d87d6
+
+ul#works
+  list-style-type decimal
+  margin 10px
+  font-size 20px
+  li
+    margin 10px 0 25px 30px
+
+ul.company
+  list-style-type disc
+  margin 10px
+  font-size 20px
+  li
+    margin 10px 0 25px 30px
+
+ul.faq
+  list-style-type none
+  margin 10px
+  font-size 20px
+  li
+    margin 10px 0 25px 30px
 
 #movie.widget
   float left
   width 425px
-  margin 0
   h1
     font-family body_font_family
-    margin 13px 10px 4px
+    margin 13px 10px 4px 0px
     padding-bottom 10px
-    border-bottom 1px dotted #ddd
     margin-bottom 10px
   p
     font-size 20px
@@ -153,7 +197,6 @@ ul#navlist
     font-style italic
     padding 0 0 10px 0
 
-      
 input
 select
   border 1px solid #555
@@ -192,7 +235,7 @@ fieldset
   width 350px
   float right
   border-radius 10px
-  margin -95px 0 0 0
+  margin -135px 0px 0px 0
   padding 20px 20px 10px 20px
   border 1px solid black
 
@@ -201,6 +244,91 @@ footer
   margin-top -10px
   padding-bottom 40px
   color #000000
+
+// @media screen and (max-width: 980px)
+//   .wrapper
+//     width: 95%
+
+// @media screen and (max-width: 768px)
+//   h1, h2, h3
+//     font-size: 24px
+
+//   header
+//     padding: 20px 50px 0px 50px
+
+//   #nav
+//     ul
+//       li
+//         a
+//           font-size 36px
+
+//   .post
+//     padding: 20px 0
+
+//   .post header, .post p
+//     width: 400px
+
+//   article aside
+//     width: 170px
+
+//   .footerBox
+//     padding: 0 20px
+
+//   .footerBox p
+//     padding: 0 0 10px 0
+
+//   #navlist a
+//     padding: 3px 10px
+//     font-size: 24px
+
+// @media screen and (max-width: 480px)
+//   .wrapper
+//     margin-top: 10px
+
+//   header
+//     padding: 10px 10px 0px 10px
+
+//   .logo
+//     float: none
+//     margin: 0 auto
+
+//   nav
+//     float: none
+//     padding: 5px 0 0 0
+
+//   #navlist a
+//     padding: 7px 2px
+//     font-family: 'Lobster', sans-serif
+//     font-size: 16px
+//     color: #677a83
+
+//   section
+//     padding: 0 10px
+
+//   article aside
+//     display: none
+
+//   .post
+//     padding: 10px 0
+//     margin: 0 10px
+
+//   .post header, .post p
+//     width: auto
+//     float: none
+
+//   .sectionFooter
+//     padding: 10px 0
+//     margin: 0 10px
+
+//   .footerBox
+//     width: auto
+//     float: none
+//     padding: 10px
+
+// img
+//   max-width: 100%
+//   height: auto
+//   width: auto
 
 /* ==|== helper classes ====================================================== */
 
@@ -217,3 +345,7 @@ footer
   background url(../images/horSeparator.png) repeat-x;
   height 13px
   margin 20px 0
+
+.bold
+  font Arial
+  font-weight bold
